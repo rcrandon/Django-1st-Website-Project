@@ -2,9 +2,10 @@
 
 ## Table of Contents:
 #### Criteria List 
-Running Tests
 
 Useful Commands
+
+Running Tests
 
 ## Criteria List
 
@@ -297,3 +298,50 @@ On all HTML pages, add:
                             an a tag with an href to the "login" path with the content "Login"
                         an li tag that contains:
                             an a tag with an href to the "signup" path with the content "Signup"
+
+## Helpful Commands
+
+Create a new virtual environment
+(Make sure you do this in a new terminal window or that you have NOT ALREADY activated a virtual
+environment):
+python -m venv .venv
+
+
+Activate a virtual environment:
+/Mac OS/ source ./.venv/bin/activate
+
+/Windows/ ./.venv/Scripts/Activate.ps1
+
+Deactivating your virtual environment
+(If you are in an active virtual environment, then you can deactivate it with this command):
+deactivate
+
+
+Update pip:
+python -m pip install --upgrade pip
+
+
+Install dependencies from requirements.txt:
+pip install -r requirements.txt
+
+
+# Create a brand new requirements.txt file from the installed pip packages:
+pip freeze > requirements.txt
+
+Run your development server:
+python manage.py runserver
+
+## Running Tests
+
+Run all Tests for your application:
+python manage.py test
+
+Run Specific Tests for your application(There are 17 Tests. Replace XX with 01, 02, 03, etc):
+python -m unittest tests.test_feature_XX
+
+Make migrations after creating or changing a model class:
+python manage.py makemigrations
+
+
+Apply the migrations to your database after making them:
+python manage.py migrate
