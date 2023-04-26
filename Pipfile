@@ -39,6 +39,9 @@ webencodings = "==0.5.1"
 zipp = "==3.8.1"
 
 [dev-packages]
+black = "*"
+flake8 = "*"
+djlint = "*"
 
 [requires]
 python_version = "3.11"
